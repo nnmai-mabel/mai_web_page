@@ -1,7 +1,7 @@
 # Ngoc Mai Nguyen's personal homepage
 This a personal dynamic web page to present myself to others.
 Link to access
-https://nnmai0606.github.io/mai_web_page/
+https://nnmai-mabel.github.io/mai_web_page/
 
 ## Project description
 
