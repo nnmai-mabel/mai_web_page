@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Add the heading of the web page with proper reference to style sheet and font used-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ngoc Mai Nguyen</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+
+</head>
+
+<!-- Set the id and class for the body of the web page-->
+
+<body id="webPage" class="container">
+
+    <main class="blocktitle">
+        <!-- Create heading and buttons appear on the same line in the web -->
+        <h1 id="welcome">Ngoc Mai Nguyen's homepage
+            <button class="tablinkHome" onclick="openPage('Home', this, 'rgb(3,30,114)')" id="defaultOpen">Home</button>
+            <button class="tablink" onclick="openPage('Education', this, 'rgb(2,76,149)')">Education</button>
+            <button class="tablink" onclick="openPage('Hobbies', this, 'rgb(1,130,187)')">Hobbies</button>
+            <button class="tablink" onclick="openPage('Contact', this, 'rgb(1,163,206)')">Contact</button>
+            <button class="tablinkTheme" type="button" onclick="darkMode()"> Toggle theme</button>
+        </h1>
+    </main>
+
+    <!-- Create a Home tab to prompt for username and update it to heading -->
+    <section id="Home" class="tabcontent">
+
+        <article id="inside">
+            <h1 id="user">Hello world</h1>
+
+            <!-- Create a form to get username and dynamically update it using onload event -->
+            <form>
+                <input class="applyForm" type="text" name="user_name" placeholder="Enter your name!">
+                <button class="applyForm" type="submit" onclick="userName()">Apply!</button>
+            </form>
+        </article>
+        <!-- Display a hello photo and when click the button, the image change to my image with credit to photographer-->
+        <figure>
+            <p id="outside"></p>
+            <img class="centerphoto" id="hellophoto"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Hello_%28yellow%29.svg/1200px-Hello_%28yellow%29.svg.png"
+                alt="Hello">
+            <figcaption>
+                <p id="helloquote"></p><br>
+                <button id="hellobutton" onclick="changeHellophoto()">Hello</button>
+            </figcaption>
+
+        </figure>
+        <br><br><br>
+
+    </section>
+
+    <!-- Create an Education tab to talk about my education background-->
+    <section id="Education" class="tabcontent">
+
+        <!-- Create a personal quote -->
+        <article id="inside">
+            <br><br>
+            <h2><em>"The best way to learn something is to do it."</em> (Ngoc Mai Nguyen - 2022)</h2>
+        </article>
+
+        <article id="outside">
+            <h1 id="backgroundtext">Background</h1>
+
+            <!-- Display a photo of myself -->
+            <figure>
+                <img class="maiava" id="avatar" src="image/maiava.jpg" alt="My profile photo">
+            </figure>
+
+        </article>
+
+        <!-- Create an unordered list to store educational information -->
+        <section id="infoeducation">
+            <ul>
+                <li>2/2022 - present: IT student at University of South Australia (majoring in Software Development)
+                </li>
+                <li>7/2021 - 1/2022: Student at Foreign Trade University (Vietnam)</li>
+                <li>2018 - 2021: English major student at Foreign Language Specialized School (Vietnam)</li>
+            </ul>
+        </section>
+
+        <!-- Create a button to update the photo onclick and show credit to photographer -->
+        <figcaption id="avabuttonmargin">
+            <br><br><br><br><br><br><br>
+            <p id="avatartaken"></p>
+            <button id="avabutton" onclick="changeAvatar()">Hello, it's me!</button>
+            
+        </figcaption>
+
+        <br><br><br><br><br><br>
+
+    </section>
+
+    <!-- Create a tab to store hobbies -->
+    <section id="Hobbies" class="tabcontent">
+
+        <article id="inside">
+            <h2 id="user">My hobbies</h2>
+            <p class="letsee">Let's see we have anything in common.</p>
+        </article>
+
+        <article id="outside">
+            <h1 id="moreaboutme">More about me!</h1><br>
+        </article>
+
+        <section id="infohobbies">
+            <section>
+                <article>
+                    <h3>I like travelling and taking photos</h3>
+                    <p>In my free time, I like going to different places to see the natural beauty and try out various
+                        interesting activities. Also, I love taking photos of natural beautiful spots.</p><br>
+                </article>
+
+                <!-- Display photos side by side -->
+                <figure>
+                    <img id="sunset" class="sunset" src="image/sunset1.jpg" alt="Sunset photo">
+                    <img id="jetty" class="jetty" src="image/jetty.jpg" alt="Jetty photo"><br><br><br>
+
+
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+                    <p id="sunsetquote" class="inline"></p>
+                    <p id="jettyquote" class="inline"></p><br><br>
+
+                    <!-- Create button to switch to other photos and show credits of photographers onclick -->
+                    <figcaption>
+                        <button id="sunset" class="sunsetbutton" onclick="changeSunset()">Sunset</button>
+                        <button id="jetty" class="jettybutton" onclick="changeJetty()">Jetty</button>
+                    </figcaption>
+                </figure>
+            </section>
+        </section>
+        <br><br>
+        <section>
+            <article>
+                <h3>I love playing with LEGO</h3>
+                <p>I also like playing LEGO, the feeling of putting brick by brick together helps me release stress
+                    and
+                    have a cute decorating item in my room.</p><br>
+            </article>
+            <!-- Display a photo -->
+            <figure>
+                <img id="soh" class="centerphoto" src="image/sohlego.jpg" alt="Sydney Opera House lego version">
+                <figcaption>
+                    <p id="sohquote"></p><br>
+
+                    <!-- Create a button to change the photo and update credit to photographer onclick -->
+                    <button id="soh" class="sohbutton" onclick="changeSoh()">Sydney Opera House</button>
+                </figcaption>
+            </figure>
+
+        </section>
+
+
+        <br><br>
+        <section>
+            <article>
+                <h3>Favorite music songs and artists</h3>
+                <p>The songs below are from my favorite artists. Listening to music makes me happy when I am sad,
+                    motivates me to follow my heart and do what I want to.</p><br>
+            </article>
+            <!-- Display 3 photos in 3 side by side columns -->
+            <section class="row">
+
+                <section class="column">
+                    <figure>
+                        <!-- Display a photo -->
+                        <img id="ybwm" class="center" src="https://pbs.twimg.com/media/EskJmUFU0AAEdlM.jpg"
+                            alt="A photo of 'You belong with me' song">
+
+                        <!-- Display the link onclick leading the user to the music video of the song -->
+                        <figcaption>
+                            <a class="song"
+                                href="https://www.youtube.com/watch?v=VuNIsY6JdUw&ab_channel=TaylorSwiftVEVO"
+                                target="_blank">You belong with me (Taylor Swift)</a>
+                            <p class="song2">You belong with me by Swifeyyy (CC-by-NC)</p>
+                        </figcaption>
+                    </figure>
+                </section>
+
+                <section class="column">
+                    <figure>
+                        <!-- Display a photo -->
+                        <img id="perfect" class="center"
+                            src="https://m.media-amazon.com/images/M/MV5BMGU5YTRjMTUtZDU4Mi00NjFlLWExYTAtMjVkN2JmOTE1Y2Q2XkEyXkFqcGdeQXVyNjE0ODc0MDc@._V1_.jpg"
+                            alt="Photo of 'Perfect'song">
+
+                        <!-- Display the link onclick leading the user to the music video of the song -->
+                        <figcaption>
+                            <a class="song" href="https://www.youtube.com/watch?v=2Vv-BfVoq4g&ab_channel=EdSheeran"
+                                target="_blank">Perfect (Ed Sheeran)</a>
+                            <p class="song2">Perfect by Ed Sheeran (CC-by-NC)</p>
+                        </figcaption>
+                    </figure>
+                </section>
+
+                <section class="column">
+                    <figure>
+                        <!-- Display a photo -->
+                        <img id="nightchanges" class="center"
+                            src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1da24c13-faae-4a1d-8c92-25764a0f47b4/de2av56-9ce14895-ecc3-4d4f-95ac-b7cb51cb6a26.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzFkYTI0YzEzLWZhYWUtNGExZC04YzkyLTI1NzY0YTBmNDdiNFwvZGUyYXY1Ni05Y2UxNDg5NS1lY2MzLTRkNGYtOTVhYy1iN2NiNTFjYjZhMjYuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.0GTMSmXV3HKE-dzhntNQd39G_GcvRge2tOzJtUymtrQ"
+                            alt="A photo of 'Night changes' song">
+
+                        <!-- Display the link onclick leading the user to the music video of the song -->
+                        <figcaption>
+                            <a class="song"
+                                href="https://www.youtube.com/watch?v=syFZfO_wfMQ&ab_channel=OneDirectionVEVO"
+                                target="_blank">Night Changes (One Direction)</a>
+                            <p class="song2">Night changes by DevianArt (CC-by-NC)</p>
+                        </figcaption>
+                    </figure>
+                </section>
+
+            </section>
+
+            <br><br><br>
+
+
+
+        </section>
+
+    </section>
+
+    <!-- Create a Contact tab -->
+    <section id="Contact" class="tabcontent">
+
+        <article id="inside">
+            <h1 id="user">Contact me!</h1>
+            <p class="letsee">Get in touch, or swing by for a cup of bubble tea.</p>
+        </article>
+
+        <article id="outside">
+            <br>
+        </article>
+
+        <!-- Display contact information in 4 different columns -->
+        <section class="row">
+
+            <!-- Add image and proper information -->
+            <section class="column2">
+                <figure>
+                    <img class="logo"
+                        src="https://play-lh.googleusercontent.com/KSuaRLiI_FlDP8cM4MzJ23ml3og5Hxb9AapaGTMZ2GgR103mvJ3AAnoOFz1yheeQBBI">
+                    <figcaption>
+                        <p class="contactme">maiunisa2022@gmail.com</p>
+                    </figcaption>
+                </figure>
+            </section>
+
+            <!-- Add image and create link leading to personal profile -->
+            <section class="column2">
+                <figure>
+                    <img class="logo"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/LinkedIn_icon_circle.svg/2048px-LinkedIn_icon_circle.svg.png">
+                    <figcaption>
+                        <a href="https://www.linkedin.com/in/nnmai/" target="_blank">LinkedIn</a>
+                    </figcaption>
+                </figure>
+            </section>
+
+            <!-- Add image and create link leading to personal profile -->
+            <section class="column2">
+                <figure>
+                    <img class="logo"
+                        src="https://cdn.hashnode.com/res/hashnode/image/upload/v1654845767617/RuHOJDaVPJ.png">
+                    <figcaption>
+                        <a href="https://github.com/maiunisa2022" target="_blank">GitHub</a>
+                    </figcaption>
+                </figure>
+            </section>
+
+            <!-- Add image and proper information -->
+            <section class="column2">
+                <figure>
+                    <img class="logo"
+                        src="https://img.freepik.com/free-vector/pin-symbol-indicates-location-gps-map_68708-398.jpg?w=2000">
+                    <figcaption>
+                        <p class="contactme">Adelaide, Australia</p>
+                    </figcaption>
+                </figure>
+            </section>
+
+        </section>
+
+    </section>
+
+    <!-- Reference to code containing functions used in this web-->
+    <section>
+        <script src="function.js"></script>
+    </section>
+
+</body>
+
+<!-- Create a footer -->
+<footer class="footer">
+    <p class="footertext">©Copyright 2022 by Ngoc Mai Nguyen. All rights reserved.</p>
+</footer>
+
+</html>

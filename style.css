@@ -1,0 +1,384 @@
+/* Color palette for light theme */
+:root {
+    --primary-color: rgb(0,0,0);
+    --secondary-color: rgb(233, 23, 8);
+    --bg-color: rgb(255, 255, 255);
+    --font-color: rgb(155, 120, 55) ;
+    --heading-color: rgb(3,30,114);
+    transition-duration: 1s;
+}
+/* Color palette for dark theme */
+[data-theme="dark"] {
+    --primary-color: rgb(230, 230, 230);
+    --secondary-color: rgb(16, 193, 196);
+    --bg-color: rgb(40, 38, 38);
+    --font-color: rgb(233, 117, 8);
+    --heading-color: rgb(252, 255, 23);
+    transition-duration: 1s;
+}
+/* Style the content inside page */
+.container {
+    height: 100vh;
+    background-color: var(--bg-color);
+}
+/* Style content in body of page */
+body {
+    color: var(--primary-color);
+    margin: 0
+}
+/* Style the link */
+a {
+    /* text-decoration: none; */
+    color: var(--secondary-color);
+    display: block;
+    margin-top: 2em;
+    font-size: 16pt;
+}
+* {
+    box-sizing: border-box
+}
+/* Set height of body and the document to 100% to enable "full page tabs" */
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Montserrat';
+    color: var(--primary-color);
+    /* width: 1430px; */
+}
+/* Style normal text */
+p {
+    color: var(--primary-color);
+    font-size: 16pt;
+    text-align: justify;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+/* Style h3 heading */
+h3 {
+    font-size: 22pt;
+}
+/* Style tab links */
+.tablink {
+    background-color: #555;
+    color: white;
+    float: inline-start;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 10%;
+    border-radius: 12px; /* make buttons rounder */
+    margin-right: 15px; /*create gaps between buttons*/
+    /* margin-left: 30px; */
+    font-family: 'Montserrat';
+   
+}
+/* Style the Home tab */
+.tablinkHome {
+    background-color: #555;
+    color: white;
+    float: inline-start;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 10%;
+    border-radius: 12px; /* make buttons rounder */
+    margin-right: 15px; /*create gaps between buttons*/
+    margin-left:35px;
+    font-family: 'Montserrat';
+}
+/* Style toggle theme button */
+.tablinkTheme {
+    background-color: rgb(255,211,0);
+    color: rgb(38, 36, 36);
+    float: inline-start;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 10pt;
+    width: 5%;
+    border-radius: 12px; /* make buttons rounder */
+    margin-right: 5px; /*create gaps between buttons*/
+    margin-left: 0px;
+    font-family: 'Montserrat';
+    padding: 8px 8px;
+    border-radius: 12px;
+    float: right;
+    text-align: center;   
+}
+/* Style the header of the page */
+#welcome {
+    margin-left: 0px;
+    color: var(--heading-color);    
+}
+/* Style different color when hovering tabs */
+.tablink:hover {
+    background-color: #777;
+}
+.tablinkHome:hover {
+    background-color:#777;
+}
+
+/* Style the tab content */
+.tabcontent {
+    color: var(--font-color);
+    display: none;
+    padding: 100px 20px;
+    height: 30%;
+    padding-top: 10px;   
+}
+/* Style different color for each tab */
+#Home {
+    background-color: rgb(3,30,114); 
+}
+#Education {
+    background-color: rgb(2,76,149);
+}
+#Hobbies {
+    background-color: rgb(1,130,187);
+}
+#Contact {
+    background-color: rgb(1,163,206);
+}
+/* Make heading appear at the same line with buttons
+I have modified the link below with the justify-content, added background color and padding according to what I need
+https://stackoverflow.com/questions/71891586/title-with-button-in-same-line-using-html-css */
+.blocktitle {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; 
+    flex-direction: row;
+    background-color: var(--bg-color);
+    padding:10px 20px;
+}
+/* Style content inside the box color at the top of the page */
+#inside {
+    color: white;
+}
+/* Style content outside the box color at the top of the page */
+#outside {
+    padding-top: 120px;
+}
+/* Style the hello text */
+#user{
+    color: rgb(255,255,255);
+    font-size: 28pt;
+}
+/* Style the apply button and placeholder */
+.applyForm {
+    font-family: 'Montserrat';
+    padding: 5px 20px;
+    border-radius: 5px;
+}
+/* Style the credit to photo */
+#helloquote {
+    color: var(--primary-color);
+    text-align: center;
+}
+/* Style the button to hello photo */
+#hellobutton {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Montserrat';
+    padding: 5px 20px;
+    border-radius: 30%
+}
+
+/* Style the profile photo */
+.maiava {
+    height: 20%;
+    width: 20%;
+    border-radius: 60%;
+    float: left;
+}
+/* Style the credit to profile photo */
+#avatartaken {
+    color: var(--primary-color);
+    font-size: 12pt;
+    margin-left: 0px;
+}
+/* Style the heading text */
+#backgroundtext {
+    color: var(--secondary-color);
+    font-size: 28pt;
+}
+/* Style the content in the education tab */
+#infoeducation {
+    font-family: 'Montserrat';
+    font-size: 20pt;
+    margin-left: 400px;
+    margin-right: 20px;
+    padding-top: 30px;
+    line-height: 30pt;
+    text-align: justify;
+    color: var(--primary-color);
+}
+/* Style the margin of the profile photo button */
+#avabuttonmargin {
+    font-family: 'Montserrat';
+    margin-left: 120px;
+    border-radius: 5px;
+}
+/* Style the button to change profile photo */
+#avabutton {
+    font-family: 'Montserrat';
+}
+/* Style the content in heading hobbies tab */
+.letsee{
+    margin-left: 0;
+    color: rgb(255,255,255);
+}
+/* Style the heading text in hobbies tab */
+#moreaboutme {
+    color: var(--secondary-color);
+    font-size: 28pt;
+}
+/* Style the content inside the hobbies tab */
+#infohobbies {
+    font-family: 'Montserrat';
+    font-size: 20pt;
+    text-align: justify;
+    content: var(--primary-color);
+}
+/* Style the sunset photo */
+.sunset {
+    height: 40%;
+    width: 30%;
+    margin-left: 100px;
+    float: left;
+}
+/* Style the button that change the sunset photo */
+.sunsetbutton {
+    font-family: 'Montserrat';
+    margin-left: 100px;
+    padding: 5px 20px;
+    border-radius: 30%;
+}
+/* Style the credit to sunset photo */
+#sunsetquote {
+    font-size: 12pt;
+    margin-left: 100px;
+    color: var(--primary-color);
+}
+/* Style the jetty photo */
+.jetty {
+    height: 40%;
+    width: 30%;
+    float: right;
+    margin-right: 200px;
+}
+/* Style the button that change the jetty photo */
+.jettybutton {
+    font-family: 'Montserrat';
+    padding: 5px 20px;
+    border-radius: 30%;
+    margin-left: 850px;
+}
+/* Style the credit to jetty photo */
+#jettyquote {
+    float: right;
+    font-size: 12pt;
+    margin-right: 200px;
+    color: var(--primary-color);
+}
+/* Display 2 p element in the same line, I got it from the link below
+https://stackoverflow.com/questions/22405858/align-the-two-p-element-in-the-same-line */
+.inline {
+    display: inline-block;
+}
+/* Center the photo, I got it from the link below
+https://www.w3schools.com/howto/howto_css_image_center.asp */
+.centerphoto {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+/* Style the button changing Sydney Opera House lego photo */
+.sohbutton {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Montserrat';
+    padding: 5px 20px;
+    border-radius: 30%
+}
+/* Style the credit of the Sydney Opera House photo */
+#sohquote {
+    font-size: 12pt;
+    text-align: center;
+    color: var(--primary-color);
+}
+/* Display the content into 3 columns, I got it from the link below
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_three_columns */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* Style the photo in the music section */
+#ybwm {
+    width: 80%;
+}
+#perfect {
+    width: 80%;
+}
+#nightchanges {
+    width: 80%;
+    margin-right: 30px;
+}
+/* Style the content of the photo */
+.song {
+    font-size: 12pt;
+    text-align: left;
+    color: var(--secondary-color);
+}
+.song2 {
+    color: var(--primary-color);
+    font-size: 12pt;
+    text-align: left;
+    margin-left: 0;
+}
+/* Divide the web into 4 columns */
+.column2 {
+    margin-left: 60px;
+    float: left;
+    width: 20%;
+    padding: 10px;
+}
+/* Resize the logo photos */
+.logo {
+    width: 30%;
+}
+/* Style the contact content */
+.contactme {
+    color: var(--primary-color);
+    margin-left: 0;
+}
+/* Create a footer, I got it from the link below, change the color and background color
+https://www.w3schools.com/howto/howto_css_fixed_footer.asp */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(255, 255, 224);
+    color: rgb(1, 1, 44);
+    text-align: center;
+}
+.footertext{
+    color: rgb(0,0,0);
+    text-align: center;
+}
+
